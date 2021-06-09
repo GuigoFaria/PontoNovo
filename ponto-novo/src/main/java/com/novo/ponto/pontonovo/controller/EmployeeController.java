@@ -17,7 +17,7 @@ import java.util.Optional;
 @RequestMapping("/employee")
 public class EmployeeController {
     @Autowired
-    EmployeeRepository employeeRepository;
+    private EmployeeRepository employeeRepository;
 
     @GetMapping
     public List<EmployeeDto> listAll() {
@@ -34,6 +34,7 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/{id}")
+    @Transactional
     public ResponseEntity<?> delete(@PathVariable String id){
         Optional<Employee> employeeOptional = employeeRepository.findById(id);
         if(employeeOptional.isPresent()){
