@@ -5,8 +5,8 @@ Saiba mais
 =================
 <!--ts-->
    * [Status](#status)
-   * [Por que eu fiz?](#Por que eu fiz?)
-   * [Quero testar](#Quero testar)
+   * [Por que eu fiz?](#por-que-eu-fiz)
+   * [Quero testar](#quero-testar)
       * [Pré Requisitos](#pre-requisitos)
       * [Swagger](#swagger)
    * [Tecnologias](#tecnologias)
