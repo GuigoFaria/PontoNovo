@@ -39,6 +39,15 @@ public class BusinessDayService {
         return optionalBusinessDay;
     }
 
+    public List<BusinessDay> returnListFromEmployee(String id) {
+        Optional<Employee> employee = employeeRepository.findById(id);
+        if (employee.isPresent()) {
+            List<BusinessDay> businessDays = businessDayRepository.findByEmployee(employee.get());
+            return businessDays;
+        }
+        return null;
+    }
+
     private BusinessDay iniciateDay(BusinessDay businessDay, Employee employee) {
         List<InJob> inJobList = new ArrayList<>();
         InJob inJob = new InJob(LocalDateTime.now());
